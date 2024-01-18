@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+  <label
+    >Titre :
+    <input
+      type="text"
+      [(ngModel)]="l.titre"
+      name="titre"
+      [disabled]="edit" /></label
+  ><br />
+  <label
+    >Auteur : <input type="text" [(ngModel)]="l.auteur" name="auteur" /></label
+  ><br />
+  <label
+    >Année : <input type="number" [(ngModel)]="l.annee" name="annee" /></label
+  ><br />
+  <button type="submit">Envoyer</button>
+</form>

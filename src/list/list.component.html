@@ -1,0 +1,20 @@
+<p>Recherche dans le titre ou l'auteur : <input [(ngModel)]="searchText" placeholder="tapez des mots">
+</p>
+	@for(l of biblio.biblio  | filter : searchText; track $index ) {
+	<div>
+		<p>
+			Titre : {{l.titre}} <br>
+      Auteur : {{l.auteur}} <br>
+      Année : {{l.annee}} <br>
+			<button (click)="editLivre(l.titre)">Editer</button>
+			<button (click)="removeLivre(l.titre)">Effacer</button>
+		</p>
+	</div>
+	}
+	<button (click)="ajoutLivre()">Ajout d'un nouveau livre</button>
+
+<!--
+	<pre>
+  {{biblio.biblio | json }}
+</pre>
+-->
